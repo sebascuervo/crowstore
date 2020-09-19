@@ -1,0 +1,22 @@
+$primary-color: #3fe8b0;
+
+//gray scale
+$light-gray: #f2f2f2;
+$gray: #bfbfbf;
+$dark-gray: #4f4f4f;
+
+//transitions
+$transition: all 0.3s ease-in-out;
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.app {
+  background-color: $light-gray;
+}

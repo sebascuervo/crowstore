@@ -1,0 +1,107 @@
+@import "../../App.scss";
+
+.card-product {
+  position: relative;
+  flex-basis: calc(25% - 1em);
+  border: 1px solid $gray;
+  margin: 0.5em;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    border: 1px solid $primary-color;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:hover .fa-heart {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &__image {
+    width: 80%;
+    display: block;
+    margin: 2em auto;
+  }
+
+  &__title {
+    font-size: 1rem;
+    margin: 0.5emem 0;
+    transition: all 2s ease;
+    color: $dark-gray;
+    font-weight: normal;
+    line-height: 1.2;
+  }
+
+  &__price {
+    color: $primary-color;
+    font-weight: 600;
+    padding: 0.5em 0;
+    font-size: 1.5em;
+  }
+
+  &__info {
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__button {
+    position: relative;
+    width: 100%;
+    display: block;
+    border: none;
+    color: $primary-color;
+    background-color: transparent;
+    padding: 1em 2em;
+    margin: 0 auto;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    border: 1px solid $primary-color;
+    cursor: pointer;
+    transition: $transition;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      transform-origin: left;
+      transition: $transition;
+      background-color: $primary-color;
+      z-index: -1;
+    }
+
+    &:hover {
+      transform: scale(1.01);
+      color: white;
+
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+
+  .fa-heart {
+    transform: translateY(-15px);
+    opacity: 0;
+    color: $primary-color;
+    font-size: 1.5em;
+    position: absolute;
+    padding: 0.5em;
+    top: 0%;
+    right: 0;
+    transition: $transition;
+  }
+}
