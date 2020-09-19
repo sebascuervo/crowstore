@@ -10,7 +10,7 @@ function App() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch(`https://api.mercadolibre.com/sites/MCO/search?q=${search}&limit=10`)
+    fetch(`https://api.mercadolibre.com/sites/MCO/search?q=${search}&limit=50`)
       .then((response) => response.json())
       .then((data) => setData(data));
   }, [search]);
